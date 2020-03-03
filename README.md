@@ -24,6 +24,7 @@
  ---
 ### 问题二：出现下述图片内错误时，且关机后无法进入图形界面
 ![](https://i.imgur.com/mHveXV7.png)
+
 原因：安装的VMware Tools版本过高。
 
 解决方法：需要安装低版本的VMware Tools。
