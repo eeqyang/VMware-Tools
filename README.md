@@ -36,4 +36,21 @@
 
 另外，若要将此文件传输到虚拟机中，
 
-- 方法一：
+- 方法一：可以先将虚拟机与主机联网使用ftp传输；
+
+- 方法二：或者先安装出错如图所示，但是在不关机的情况下可以使用共享文件，将上述文件通过共享文件转移到虚拟机中。
+
+但是，方法二发现关机后进不了图形界面，可以通过**卸载VMware Tools**解决。login界面登入root账号，再输入以下代码。
+
+**卸载VMware Tools的方法**：
+
+1. 输入`/usr/bin/vmware-uninstall-tools.pl`
+
+2. 输入`system-config-display`，进行分辨率配置，生成/etc/X11/xorg.conf文件。
+
+3. 输入`startx`直接启动或者`reboot`重启
+
+4. 但在安装旧版本VMware Tools之前，先删除/usr/lib/vmware-tools，其方法为`rm -rvf /usr/lib/vmware-tools`
+ 
+最后，重新安装下载的旧版本的VMware Tools，一直点击Enter键完成安装。
+
